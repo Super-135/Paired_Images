@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Paired_Images:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Paired_Images_jar</output-path>
+    <root id="archive" name="Paired_Images.jar">
+      <element id="module-output" name="Paired_Images" />
+    </root>
+  </artifact>
+</component>
