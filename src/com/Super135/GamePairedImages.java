@@ -7,9 +7,9 @@ import java.io.IOException;
 
 public class GamePairedImages extends JFrame {
 
-    private static final String[] imgsFinal = {"src/com/Super135/Animals/bear.jpg","src/com/Super135/Animals/cat.jpg","src/com/Super135/Animals/dog.jpg",
-            "src/com/Super135/Animals/elephant.jpg","src/com/Super135/Animals/fox.jpg", "src/com/Super135/Animals/giraffe.jpg",
-            "src/com/Super135/Animals/lion.jpg", "src/com/Super135/Animals/mouse.jpg", "src/com/Super135/Animals/rabbit.jpg"};
+    private static final String[] imgsFinal = {"bear.jpg","cat.jpg","dog.jpg",
+            "elephant.jpg","fox.jpg", "giraffe.jpg",
+            "lion.jpg", "mouse.jpg", "rabbit.jpg"};
     private static JButton copy1 = null;
     private static JButton copy2 = null;
     private static Boolean Flag = false;
@@ -40,7 +40,7 @@ public class GamePairedImages extends JFrame {
         JPanel panel = new JPanel(new GridLayout(row,col));
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                ImageIcon imageIcon = new ImageIcon(rpf[k]);
+                ImageIcon imageIcon = new ImageIcon(GamePairedImages.class.getResource(rpf[k]));
                 k++;
                 buttons[i][j] = new JButton();
                 JButton copy = buttons[i][j];
@@ -65,7 +65,7 @@ public class GamePairedImages extends JFrame {
                         e.printStackTrace();
                     }
                     if (copy1 != null) {
-                            if (copy.getIcon().toString() != copy1.getIcon().toString()){
+                            if (! copy.getIcon().toString().equals(copy1.getIcon().toString())){
                                 Flag = true;
                                 copy2 = copy;
                             } else {
